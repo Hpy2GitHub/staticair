@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Evansville, IN",
+    "zip": "47708",
+    "coords": { "lat": 37.9747, "lon": -87.5558, "city": "Evansville", "state": "IN" }
+  },
+  {
+    "name": "Chicago, IL",
+    "zip": "60601",
+    "coords": { "lat": 41.8781, "lon": -87.6298, "city": "Chicago", "state": "IL" }
+  },
+  {
+    "name": "Redwood City, CA",
+    "zip": "94061",
+    "coords": { "lat": 37.4752, "lon": -122.2279, "city": "Redwood City", "state": "CA" }
+  },
+  {
+    "name": "Lecanto, FL",
+    "zip": "34461",
+    "coords": { "lat": 28.8500, "lon": -82.4856, "city": "Lecanto", "state": "FL" }
+  },
+  {
+    "name": "Warren, MI",
+    "zip": "48089",
+    "coords": { "lat": 42.5145, "lon": -83.0147, "city": "Warren", "state": "MI" }
+  },
+  {
+    "name": "Red Bank, NJ",
+    "zip": "07701",
+    "coords": { "lat": 40.3471, "lon": -74.0654, "city": "Red Bank", "state": "NJ" }
+  },
+  {
+    "name": "Coeur d'Alene, ID",
+    "zip": "83814",
+    "coords": { "lat": 47.6777, "lon": -116.7805, "city": "Coeur d'Alene", "state": "ID" }
+  }
+]

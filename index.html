@@ -629,11 +629,7 @@
             <p class="subtitle">Real-time AQI conditions for multiple locations · via AirNow.gov</p>
         </header>
 
-        <div class="key-banner" id="keyBanner">
-            No AirNow API key configured. Get a free key at
-            <a href="https://docs.airnowapi.org/account/request/" target="_blank" style="color:#facc15;">docs.airnowapi.org</a>
-            and set it in <code>config.js</code>.
-        </div>
+        <div class="key-banner" id="keyBanner"></div>
 
         <div class="controls-bar">
             <input type="text" id="searchInput" class="search-input" placeholder="Search by city, state, or ZIP...">
@@ -675,44 +671,9 @@
     <script src="config.js"></script>
 
     <script>
-        // Configuration for locations
-        const LOCATIONS = [
-            {
-                name: 'Evansville, IN',
-                zip: '47708',
-                coords: { lat: 37.9747, lon: -87.5558, city: 'Evansville', state: 'IN' }
-            },
-            {
-                name: 'Chicago, IL',
-                zip: '60601',
-                coords: { lat: 41.8781, lon: -87.6298, city: 'Chicago', state: 'IL' }
-            },
-            {
-                name: 'Redwood City, CA',
-                zip: '94061',
-                coords: { lat: 37.4752, lon: -122.2279, city: 'Redwood City', state: 'CA' }
-            },
-            {
-                name: 'Lecanto, FL',
-                zip: '34461',
-                coords: { lat: 28.8500, lon: -82.4856, city: 'Lecanto', state: 'FL' }
-            },
-            {
-                name: 'Warren, MI',
-                zip: '48089',
-                coords: { lat: 42.5145, lon: -83.0147, city: 'Warren', state: 'MI' }
-            },
-            {
-                name: 'Red Bank, NJ',
-                zip: '07701',
-                coords: { lat: 40.3471, lon: -74.0654, city: 'Red Bank', state: 'NJ' }
-            },
-            {
-                name: 'Coeur d\'Alene, ID',
-                zip: '83814',
-                coords: { lat: 47.6777, lon: -116.7805, city: 'Coeur d\'Alene', state: 'ID' }
-            }
-        ];
+        // Loaded at startup from locations.json (shared with the GitHub Actions
+        // fetch script, so the two never drift apart). See init().
+        let LOCATIONS = [];
 
         const STATE_ABBREVS = {
             'Alabama':'AL','Alaska':'AK','Arizona':'AZ','Arkansas':'AR','California':'CA',
@@ -771,7 +732,14 @@
                 this.typeaheadResults = document.getElementById('typeaheadResults');
                 this.saveBtn = document.getElementById('saveBtn');
                 this.keyBanner = document.getElementById('keyBanner');
-                this.isSharedView = new URLSearchParams(window.location.search).has('locations');
+                // No client-side key (the deployed site) means we can't live-fetch
+                // arbitrary locations, so we read the GitHub Action's committed
+                // snapshot instead and disable adding/sharing custom locations.
+                this.usingSnapshot = !hasValidApiKey();
+                this.snapshotGeneratedAt = null;
+                this.isSharedView = this.usingSnapshot
+                    ? false
+                    : new URLSearchParams(window.location.search).has('locations');
                 this.aqiResults = [];
                 this.currentSort = 'worst';
                 this._searchDebounce = null;
@@ -780,7 +748,12 @@
             }
 
             async init() {
-                this.keyBanner.classList.toggle('show', !hasValidApiKey());
+                LOCATIONS = await fetch('locations.json').then(r => r.json());
+
+                if (this.usingSnapshot) {
+                    this.addLocationBtn.style.display = 'none';
+                    document.getElementById('shareBtn').style.display = 'none';
+                }
 
                 this.searchInput.addEventListener('input', () => this.applySearch());
                 this.refreshBtn.addEventListener('click', () => this.handleRefresh());
@@ -841,6 +814,10 @@
             }
 
             getActiveLocations() {
+                if (this.usingSnapshot) {
+                    const removed = new Set(JSON.parse(localStorage.getItem('aq_removed_defaults') || '[]'));
+                    return LOCATIONS.filter(loc => !removed.has(loc.zip));
+                }
                 if (this.isSharedView) {
                     try {
                         return JSON.parse(new URLSearchParams(window.location.search).get('locations'));
@@ -855,6 +832,11 @@
                 const active = this.getActiveLocations();
                 this.showLoading(active.length);
 
+                if (this.usingSnapshot) {
+                    await this.loadSnapshot(active);
+                    return;
+                }
+
                 const aqiPromises = active.map(async (location) => {
                     try {
                         const aqi = await this.getAirQualityData(location.coords);
@@ -867,6 +849,31 @@
 
                 const results = await Promise.allSettled(aqiPromises);
                 this.displayAirQuality(results);
+            }
+
+            async loadSnapshot(active) {
+                try {
+                    const response = await fetch('data/aqi.json', { cache: 'no-store' });
+                    if (!response.ok) throw new Error(`Snapshot fetch failed: ${response.status}`);
+                    const snapshot = await response.json();
+                    this.snapshotGeneratedAt = snapshot.generatedAt ? new Date(snapshot.generatedAt) : null;
+                    this.aqiResults = active.map(location => ({
+                        location,
+                        aqi: snapshot.locations?.[location.zip] ?? null,
+                        zip: location.zip,
+                        coords: location.coords
+                    }));
+                    this.keyBanner.classList.remove('show');
+                } catch (err) {
+                    console.error('Failed to load AQI snapshot:', err);
+                    this.snapshotGeneratedAt = null;
+                    this.aqiResults = active.map(location => ({
+                        location, aqi: null, zip: location.zip, coords: location.coords, error: err.message
+                    }));
+                    this.keyBanner.innerHTML = `No cached AQI data available yet (the GitHub Action may not have run yet). Run this locally with your own AirNow key in <code>config.js</code> for live data — see <a href="https://docs.airnowapi.org/account/request/" target="_blank" style="color:#facc15;">docs.airnowapi.org</a>.`;
+                    this.keyBanner.classList.add('show');
+                }
+                this.renderCards();
             }
 
             async fetchCurrentObservation(coords) {
@@ -1065,31 +1072,40 @@
             }
 
             updateLastUpdated() {
-                const now = new Date();
-                const timeString = now.toLocaleTimeString('en-US', {
+                const timestamp = (this.usingSnapshot && this.snapshotGeneratedAt) ? this.snapshotGeneratedAt : new Date();
+                const timeString = timestamp.toLocaleTimeString('en-US', {
                     hour: 'numeric',
                     minute: '2-digit',
                     second: '2-digit',
                     hour12: true
                 });
-                const dateString = now.toLocaleDateString('en-US', {
+                const dateString = timestamp.toLocaleDateString('en-US', {
                     weekday: 'long',
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric'
                 });
 
+                const label = this.usingSnapshot ? 'Data refreshed' : 'Last updated';
+                const note = this.usingSnapshot
+                    ? 'Refreshed automatically every ~30 minutes'
+                    : 'Auto-refreshes every 5 minutes';
+
                 this.lastUpdatedElement.innerHTML = `
-                    Last updated: <strong>${timeString}</strong> on ${dateString}<br>
-                    <small>Auto-refreshes every 5 minutes</small>
+                    ${label}: <strong>${timeString}</strong> on ${dateString}<br>
+                    <small>${note}</small>
                 `;
             }
 
             setupAutoRefresh() {
-                // Auto-refresh air quality data every 5 minutes
+                // In snapshot mode this just re-fetches data/aqi.json (cheap, same-origin);
+                // in live mode it re-hits AirNow directly.
                 setInterval(async () => {
-                    console.log('Auto-refreshing air quality data...');
-                    await this.refreshAirQualityData();
+                    if (this.usingSnapshot) {
+                        await this.loadAirQuality();
+                    } else {
+                        await this.refreshAirQualityData();
+                    }
                     this.updateLastUpdated();
                 }, 5 * 60 * 1000);
             }
