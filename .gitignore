@@ -1,0 +1,10 @@
+# API key (contains the AirNow API key) — keep out of git
+config.js
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.sw?

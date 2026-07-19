@@ -1,0 +1,17 @@
+{
+  "name": "Air Quality Dashboard",
+  "short_name": "Air Quality",
+  "description": "Real-time air quality (AQI) conditions for multiple locations",
+  "start_url": "/staticair/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1e3a5f",
+  "theme_color": "#1e3a5f",
+  "icons": [
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
