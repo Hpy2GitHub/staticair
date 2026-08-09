@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-09T05:11:54.152Z",
+  "generatedAt": "2026-08-09T06:08:01.995Z",
   "locations": {
     "34461": {
-      "aqi": 49,
+      "aqi": 43,
       "parameter": "PM2.5",
       "isForecast": false,
       "anyForecast": false,
@@ -13,7 +13,7 @@
       "readings": [
         {
           "parameter": "PM2.5",
-          "aqi": 49,
+          "aqi": 43,
           "categoryName": "Good",
           "reportingArea": "Citrus County",
           "stateCode": "FL",
@@ -24,7 +24,7 @@
       ]
     },
     "47708": {
-      "aqi": 53,
+      "aqi": 52,
       "parameter": "PM2.5",
       "isForecast": false,
       "anyForecast": false,
@@ -35,7 +35,7 @@
       "readings": [
         {
           "parameter": "PM2.5",
-          "aqi": 53,
+          "aqi": 52,
           "categoryName": "Moderate",
           "reportingArea": "Evansville",
           "stateCode": "IN",
@@ -45,7 +45,7 @@
         },
         {
           "parameter": "O3",
-          "aqi": 30,
+          "aqi": 28,
           "categoryName": "Good",
           "reportingArea": "Evansville",
           "stateCode": "IN",
@@ -55,7 +55,7 @@
         },
         {
           "parameter": "PM10",
-          "aqi": 18,
+          "aqi": 17,
           "categoryName": "Good",
           "reportingArea": "Evansville",
           "stateCode": "IN",
@@ -108,7 +108,7 @@
       ]
     },
     "60601": {
-      "aqi": 52,
+      "aqi": 53,
       "parameter": "PM2.5",
       "isForecast": false,
       "anyForecast": false,
@@ -119,7 +119,7 @@
       "readings": [
         {
           "parameter": "PM2.5",
-          "aqi": 52,
+          "aqi": 53,
           "categoryName": "Moderate",
           "reportingArea": "Chicago",
           "stateCode": "IL",
@@ -129,7 +129,7 @@
         },
         {
           "parameter": "O3",
-          "aqi": 31,
+          "aqi": 21,
           "categoryName": "Good",
           "reportingArea": "Chicago",
           "stateCode": "IL",
@@ -140,7 +140,7 @@
       ]
     },
     "83814": {
-      "aqi": 166,
+      "aqi": 164,
       "parameter": "PM2.5",
       "isForecast": false,
       "anyForecast": false,
@@ -151,7 +151,7 @@
       "readings": [
         {
           "parameter": "PM2.5",
-          "aqi": 166,
+          "aqi": 164,
           "categoryName": "Unhealthy",
           "reportingArea": "Coeur d'Alene",
           "stateCode": "ID",
