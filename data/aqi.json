@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-10T11:15:17.401Z",
+  "generatedAt": "2026-08-10T12:08:22.874Z",
   "locations": {
     "34461": {
-      "aqi": 32,
+      "aqi": 42,
       "parameter": "PM2.5",
       "isForecast": false,
       "anyForecast": false,
@@ -13,7 +13,7 @@
       "readings": [
         {
           "parameter": "PM2.5",
-          "aqi": 32,
+          "aqi": 42,
           "categoryName": "Good",
           "reportingArea": "Citrus County",
           "stateCode": "FL",
