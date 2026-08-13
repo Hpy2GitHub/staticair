@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-08-12T23:40:50.677Z",
+  "generatedAt": "2026-08-13T01:57:11.212Z",
   "locations": {
     "34461": {
-      "aqi": 52,
+      "aqi": 44,
       "parameter": "PM2.5",
       "isForecast": false,
       "anyForecast": false,
       "reportingArea": "Citrus County",
       "stateCode": "FL",
-      "observedHour": 18,
+      "observedHour": 20,
       "timeZone": "EST",
       "readings": [
         {
           "parameter": "PM2.5",
-          "aqi": 52,
-          "categoryName": "Moderate",
+          "aqi": 44,
+          "categoryName": "Good",
           "reportingArea": "Citrus County",
           "stateCode": "FL",
-          "observedHour": 18,
+          "observedHour": 20,
           "timeZone": "EST",
           "isForecast": false
         }
@@ -30,7 +30,7 @@
       "anyForecast": false,
       "reportingArea": "Evansville",
       "stateCode": "IN",
-      "observedHour": 17,
+      "observedHour": 19,
       "timeZone": "CST",
       "readings": [
         {
@@ -39,7 +39,7 @@
           "categoryName": "Moderate",
           "reportingArea": "Evansville",
           "stateCode": "IN",
-          "observedHour": 17,
+          "observedHour": 19,
           "timeZone": "CST",
           "isForecast": false
         },
@@ -49,120 +49,120 @@
           "categoryName": "Good",
           "reportingArea": "Evansville",
           "stateCode": "IN",
-          "observedHour": 17,
+          "observedHour": 19,
           "timeZone": "CST",
-          "isForecast": false
-        },
-        {
-          "parameter": "PM10",
-          "aqi": 24,
-          "categoryName": "Good",
-          "reportingArea": "Evansville",
-          "stateCode": "IN",
-          "observedHour": 17,
-          "timeZone": "CST",
-          "isForecast": false
-        }
-      ]
-    },
-    "48089": {
-      "aqi": 61,
-      "parameter": "O3",
-      "isForecast": false,
-      "anyForecast": false,
-      "reportingArea": "Southeast",
-      "stateCode": "MI",
-      "observedHour": 18,
-      "timeZone": "EST",
-      "readings": [
-        {
-          "parameter": "O3",
-          "aqi": 61,
-          "categoryName": "Moderate",
-          "reportingArea": "Southeast",
-          "stateCode": "MI",
-          "observedHour": 18,
-          "timeZone": "EST",
-          "isForecast": false
-        },
-        {
-          "parameter": "PM2.5",
-          "aqi": 59,
-          "categoryName": "Moderate",
-          "reportingArea": "Southeast",
-          "stateCode": "MI",
-          "observedHour": 18,
-          "timeZone": "EST",
           "isForecast": false
         },
         {
           "parameter": "PM10",
           "aqi": 20,
           "categoryName": "Good",
+          "reportingArea": "Evansville",
+          "stateCode": "IN",
+          "observedHour": 19,
+          "timeZone": "CST",
+          "isForecast": false
+        }
+      ]
+    },
+    "48089": {
+      "aqi": 60,
+      "parameter": "PM2.5",
+      "isForecast": false,
+      "anyForecast": false,
+      "reportingArea": "Southeast",
+      "stateCode": "MI",
+      "observedHour": 20,
+      "timeZone": "EST",
+      "readings": [
+        {
+          "parameter": "PM2.5",
+          "aqi": 60,
+          "categoryName": "Moderate",
           "reportingArea": "Southeast",
           "stateCode": "MI",
-          "observedHour": 18,
+          "observedHour": 20,
+          "timeZone": "EST",
+          "isForecast": false
+        },
+        {
+          "parameter": "O3",
+          "aqi": 47,
+          "categoryName": "Good",
+          "reportingArea": "Southeast",
+          "stateCode": "MI",
+          "observedHour": 20,
+          "timeZone": "EST",
+          "isForecast": false
+        },
+        {
+          "parameter": "PM10",
+          "aqi": 12,
+          "categoryName": "Good",
+          "reportingArea": "Southeast",
+          "stateCode": "MI",
+          "observedHour": 20,
           "timeZone": "EST",
           "isForecast": false
         }
       ]
     },
     "60601": {
-      "aqi": 61,
+      "aqi": 64,
       "parameter": "O3",
       "isForecast": false,
       "anyForecast": false,
       "reportingArea": "Chicago",
       "stateCode": "IL",
-      "observedHour": 17,
+      "observedHour": 19,
       "timeZone": "CST",
       "readings": [
         {
           "parameter": "O3",
-          "aqi": 61,
+          "aqi": 64,
           "categoryName": "Moderate",
           "reportingArea": "Chicago",
           "stateCode": "IL",
-          "observedHour": 17,
+          "observedHour": 19,
           "timeZone": "CST",
           "isForecast": false
         },
         {
           "parameter": "PM2.5",
-          "aqi": 39,
+          "aqi": 42,
           "categoryName": "Good",
           "reportingArea": "Chicago",
           "stateCode": "IL",
-          "observedHour": 17,
+          "observedHour": 19,
           "timeZone": "CST",
           "isForecast": false
         }
       ]
     },
     "83814": {
-      "aqi": 100,
+      "aqi": 107,
       "parameter": "PM2.5",
       "isForecast": false,
       "anyForecast": false,
       "reportingArea": "Coeur d'Alene",
       "stateCode": "ID",
-      "observedHour": 15,
+      "observedHour": 17,
       "timeZone": "PST",
       "readings": [
         {
           "parameter": "PM2.5",
-          "aqi": 100,
-          "categoryName": "Moderate",
+          "aqi": 107,
+          "categoryName": "Unhealthy for Sensitive Groups",
           "reportingArea": "Coeur d'Alene",
           "stateCode": "ID",
-          "observedHour": 15,
+          "observedHour": 17,
           "timeZone": "PST",
           "isForecast": false
         }
       ]
     },
     "94061": {
-      "aqi": 55,
+      "aqi": 44,
       "parameter": "PM2.5",
       "isForecast": true,
       "anyForecast": true,
@@ -173,8 +173,8 @@
       "readings": [
         {
           "parameter": "PM2.5",
-          "aqi": 55,
-          "categoryName": "Moderate",
+          "aqi": 44,
+          "categoryName": "Good",
           "reportingArea": "Redwood City",
           "stateCode": "CA",
           "isForecast": true
@@ -182,25 +182,15 @@
       ]
     },
     "07701": {
-      "aqi": 71,
-      "parameter": "O3",
-      "isForecast": false,
+      "aqi": 60,
+      "parameter": "PM2.5",
+      "isForecast": true,
       "anyForecast": true,
       "reportingArea": "Monmouth County",
       "stateCode": "NJ",
-      "observedHour": 18,
+      "observedHour": 20,
       "timeZone": "EST",
       "readings": [
-        {
-          "parameter": "O3",
-          "aqi": 71,
-          "categoryName": "Moderate",
-          "reportingArea": "Monmouth County",
-          "stateCode": "NJ",
-          "observedHour": 18,
-          "timeZone": "EST",
-          "isForecast": false
-        },
         {
           "parameter": "PM2.5",
           "aqi": 60,
@@ -208,6 +198,16 @@
           "reportingArea": "Monmouth County",
           "stateCode": "NJ",
           "isForecast": true
+        },
+        {
+          "parameter": "O3",
+          "aqi": 49,
+          "categoryName": "Good",
+          "reportingArea": "Monmouth County",
+          "stateCode": "NJ",
+          "observedHour": 20,
+          "timeZone": "EST",
+          "isForecast": false
         }
       ]
     }
