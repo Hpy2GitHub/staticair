@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T10:27:44.657Z",
+  "generatedAt": "2026-08-18T10:57:18.446Z",
   "locations": {
     "34461": null,
     "47708": {
@@ -76,7 +76,7 @@
         },
         {
           "parameter": "O3",
-          "aqi": 12,
+          "aqi": 11,
           "categoryName": "Good",
           "reportingArea": "Southeast",
           "stateCode": "MI",
