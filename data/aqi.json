@@ -1,7 +1,28 @@
 {
-  "generatedAt": "2026-08-18T20:23:18.398Z",
+  "generatedAt": "2026-08-18T20:50:07.562Z",
   "locations": {
-    "34461": null,
+    "34461": {
+      "aqi": 58,
+      "parameter": "PM2.5",
+      "isForecast": false,
+      "anyForecast": false,
+      "reportingArea": "Citrus County",
+      "stateCode": "FL",
+      "observedHour": 15,
+      "timeZone": "EST",
+      "readings": [
+        {
+          "parameter": "PM2.5",
+          "aqi": 58,
+          "categoryName": "Moderate",
+          "reportingArea": "Citrus County",
+          "stateCode": "FL",
+          "observedHour": 15,
+          "timeZone": "EST",
+          "isForecast": false
+        }
+      ]
+    },
     "47708": {
       "aqi": 35,
       "parameter": "O3",
