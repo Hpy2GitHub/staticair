@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-19T22:24:03.655Z",
+  "generatedAt": "2026-08-19T22:51:26.278Z",
   "locations": {
     "34461": {
       "aqi": 56,
@@ -183,7 +183,7 @@
         },
         {
           "parameter": "O3",
-          "aqi": 27,
+          "aqi": 23,
           "categoryName": "Good",
           "reportingArea": "Redwood City",
           "stateCode": "CA",
