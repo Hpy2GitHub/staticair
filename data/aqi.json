@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T10:29:40.719Z",
+  "generatedAt": "2026-08-20T11:00:23.989Z",
   "locations": {
     "34461": {
       "aqi": 38,
@@ -134,6 +134,16 @@
           "reportingArea": "Chicago",
           "stateCode": "IL",
           "observedHour": 4,
+          "timeZone": "CST",
+          "isForecast": false
+        },
+        {
+          "parameter": "PM10",
+          "aqi": 19,
+          "categoryName": "Good",
+          "reportingArea": "Chicago",
+          "stateCode": "IL",
+          "observedHour": 3,
           "timeZone": "CST",
           "isForecast": false
         }
