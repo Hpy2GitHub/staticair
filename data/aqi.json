@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T23:23:20.501Z",
+  "generatedAt": "2026-08-21T23:49:18.789Z",
   "locations": {
     "34461": null,
     "47708": {
@@ -46,7 +46,7 @@
     },
     "48089": {
       "aqi": 54,
-      "parameter": "O3",
+      "parameter": "PM2.5",
       "isForecast": false,
       "anyForecast": false,
       "reportingArea": "Southeast",
@@ -55,7 +55,7 @@
       "timeZone": "EST",
       "readings": [
         {
-          "parameter": "O3",
+          "parameter": "PM2.5",
           "aqi": 54,
           "categoryName": "Moderate",
           "reportingArea": "Southeast",
@@ -65,9 +65,9 @@
           "isForecast": false
         },
         {
-          "parameter": "PM2.5",
-          "aqi": 54,
-          "categoryName": "Moderate",
+          "parameter": "O3",
+          "aqi": 48,
+          "categoryName": "Good",
           "reportingArea": "Southeast",
           "stateCode": "MI",
           "observedHour": 18,
