@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T22:26:40.539Z",
+  "generatedAt": "2026-08-25T22:56:28.781Z",
   "locations": {
     "34461": {
       "aqi": 50,
@@ -162,7 +162,7 @@
       ]
     },
     "94061": {
-      "aqi": 24,
+      "aqi": 23,
       "parameter": "O3",
       "isForecast": false,
       "anyForecast": false,
@@ -173,7 +173,7 @@
       "readings": [
         {
           "parameter": "O3",
-          "aqi": 24,
+          "aqi": 23,
           "categoryName": "Good",
           "reportingArea": "Redwood City",
           "stateCode": "CA",
