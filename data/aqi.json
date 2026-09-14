@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T23:20:02.228Z",
+  "generatedAt": "2026-09-14T01:23:30.819Z",
   "locations": {
     "34461": {
       "aqi": 27,
@@ -8,7 +8,7 @@
       "anyForecast": false,
       "reportingArea": "Citrus County",
       "stateCode": "FL",
-      "observedHour": 18,
+      "observedHour": 20,
       "timeZone": "EST",
       "readings": [
         {
@@ -17,91 +17,91 @@
           "categoryName": "Good",
           "reportingArea": "Citrus County",
           "stateCode": "FL",
-          "observedHour": 18,
+          "observedHour": 20,
           "timeZone": "EST",
           "isForecast": false
         }
       ]
     },
     "47708": {
-      "aqi": 46,
+      "aqi": 49,
       "parameter": "PM2.5",
       "isForecast": false,
       "anyForecast": false,
       "reportingArea": "Evansville",
       "stateCode": "IN",
-      "observedHour": 17,
+      "observedHour": 19,
       "timeZone": "CST",
       "readings": [
         {
           "parameter": "PM2.5",
-          "aqi": 46,
+          "aqi": 49,
           "categoryName": "Good",
           "reportingArea": "Evansville",
           "stateCode": "IN",
-          "observedHour": 17,
+          "observedHour": 19,
           "timeZone": "CST",
           "isForecast": false
         },
         {
           "parameter": "O3",
-          "aqi": 43,
+          "aqi": 40,
           "categoryName": "Good",
           "reportingArea": "Evansville",
           "stateCode": "IN",
-          "observedHour": 17,
+          "observedHour": 19,
           "timeZone": "CST",
           "isForecast": false
         },
         {
           "parameter": "PM10",
-          "aqi": 25,
+          "aqi": 26,
           "categoryName": "Good",
           "reportingArea": "Evansville",
           "stateCode": "IN",
-          "observedHour": 17,
+          "observedHour": 19,
           "timeZone": "CST",
           "isForecast": false
         }
       ]
     },
     "48089": {
-      "aqi": 31,
+      "aqi": 30,
       "parameter": "O3",
       "isForecast": false,
       "anyForecast": false,
       "reportingArea": "Southeast",
       "stateCode": "MI",
-      "observedHour": 18,
+      "observedHour": 20,
       "timeZone": "EST",
       "readings": [
         {
           "parameter": "O3",
-          "aqi": 31,
+          "aqi": 30,
           "categoryName": "Good",
           "reportingArea": "Southeast",
           "stateCode": "MI",
-          "observedHour": 18,
+          "observedHour": 20,
           "timeZone": "EST",
           "isForecast": false
         },
         {
           "parameter": "PM2.5",
-          "aqi": 30,
+          "aqi": 25,
           "categoryName": "Good",
           "reportingArea": "Southeast",
           "stateCode": "MI",
-          "observedHour": 18,
+          "observedHour": 20,
           "timeZone": "EST",
           "isForecast": false
         },
         {
           "parameter": "PM10",
-          "aqi": 17,
+          "aqi": 19,
           "categoryName": "Good",
           "reportingArea": "Southeast",
           "stateCode": "MI",
-          "observedHour": 18,
+          "observedHour": 20,
           "timeZone": "EST",
           "isForecast": false
         }
@@ -109,53 +109,53 @@
     },
     "60601": {
       "aqi": 22,
-      "parameter": "O3",
+      "parameter": "PM2.5",
       "isForecast": false,
       "anyForecast": false,
       "reportingArea": "Chicago",
       "stateCode": "IL",
-      "observedHour": 17,
+      "observedHour": 19,
       "timeZone": "CST",
       "readings": [
         {
-          "parameter": "O3",
+          "parameter": "PM2.5",
           "aqi": 22,
           "categoryName": "Good",
           "reportingArea": "Chicago",
           "stateCode": "IL",
-          "observedHour": 17,
+          "observedHour": 19,
           "timeZone": "CST",
           "isForecast": false
         },
         {
-          "parameter": "PM2.5",
-          "aqi": 20,
+          "parameter": "O3",
+          "aqi": 21,
           "categoryName": "Good",
           "reportingArea": "Chicago",
           "stateCode": "IL",
-          "observedHour": 17,
+          "observedHour": 19,
           "timeZone": "CST",
           "isForecast": false
         }
       ]
     },
     "83814": {
-      "aqi": 4,
+      "aqi": 9,
       "parameter": "PM2.5",
       "isForecast": false,
       "anyForecast": false,
       "reportingArea": "Coeur d'Alene",
       "stateCode": "ID",
-      "observedHour": 15,
+      "observedHour": 17,
       "timeZone": "PST",
       "readings": [
         {
           "parameter": "PM2.5",
-          "aqi": 4,
+          "aqi": 9,
           "categoryName": "Good",
           "reportingArea": "Coeur d'Alene",
           "stateCode": "ID",
-          "observedHour": 15,
+          "observedHour": 17,
           "timeZone": "PST",
           "isForecast": false
         }
@@ -168,7 +168,7 @@
       "anyForecast": false,
       "reportingArea": "Redwood City",
       "stateCode": "CA",
-      "observedHour": 15,
+      "observedHour": 17,
       "timeZone": "PST",
       "readings": [
         {
@@ -177,24 +177,24 @@
           "categoryName": "Good",
           "reportingArea": "Redwood City",
           "stateCode": "CA",
-          "observedHour": 15,
+          "observedHour": 17,
           "timeZone": "PST",
           "isForecast": false
         },
         {
           "parameter": "PM2.5",
-          "aqi": 29,
+          "aqi": 24,
           "categoryName": "Good",
           "reportingArea": "Redwood City",
           "stateCode": "CA",
-          "observedHour": 15,
+          "observedHour": 17,
           "timeZone": "PST",
           "isForecast": false
         }
       ]
     },
     "07701": {
-      "aqi": 50,
+      "aqi": 45,
       "parameter": "O3",
       "isForecast": true,
       "anyForecast": true,
@@ -205,7 +205,7 @@
       "readings": [
         {
           "parameter": "O3",
-          "aqi": 50,
+          "aqi": 45,
           "categoryName": "Good",
           "reportingArea": "Monmouth County",
           "stateCode": "NJ",
